@@ -1,3 +1,34 @@
 .container {
   margin-top: 30px;
 }
+.aba{
+  text-decoration:none;
+  border:2px solid grey;
+  font-size:17pt;
+  padding:10px;
+  border-color:grey grey black grey;
+  color:grey;
+  opacity:0.5;
+  transition: 800ms;
+}
+.active{
+  text-decoration:none;
+  border:2px solid;
+  border-color: black black transparent black;
+  background-color: grey;
+  color:white;
+  font-size:17pt;
+  padding:15px 15px 10px 15px;
+  opacity:1;
+}
+li{
+  padding:0 0 7px 0;
+  margin-right: 10px;
+}
+.bloco{
+  border-bottom:2px solid black;
+  display:inline-block;
+}
+ul{
+  min-width: 300px;
+}

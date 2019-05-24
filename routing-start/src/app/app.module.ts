@@ -11,6 +11,8 @@ import { UserComponent } from './users/user/user.component';
 import { EditServerComponent } from './servers/edit-server/edit-server.component';
 import { ServerComponent } from './servers/server/server.component';
 import { ServersService } from './servers/servers.service';
+import { RouterModule } from '@angular/router';
+import { rotas } from './appRouting'
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { ServersService } from './servers/servers.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(rotas)
   ],
   providers: [ServersService],
   bootstrap: [AppComponent]
