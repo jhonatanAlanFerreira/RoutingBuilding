@@ -1,16 +1,29 @@
 <div class="row">
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
-      <a
-        href="#"
+
+
+    <!--  <a
+        routerLink="/servers/{{ server.id }}/edit"
+        [queryParams]={editAllowed:false}
         class="list-group-item"
         *ngFor="let server of servers">
         {{ server.name }}
+      </a> -->
+
+      <a
+        (click)="serveSelect(server.id)"
+        (dblclick)="toEdit(server.id)"
+        role="button"
+        class="list-group-item"
+        [ngClass]="{selected: idSelected == server.id}"
+        *ngFor="let server of servers">
+        {{ server.name }}
       </a>
+
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
-    <app-edit-server></app-edit-server>
     <hr>
     <app-server></app-server>
   </div>
